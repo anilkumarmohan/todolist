@@ -1,0 +1,21 @@
+<div class="main-content">
+  <div class="header">
+    <p class="h1 color-green">Todo List</p>
+  </div>
+  <div class="content">
+    <div class="search-box">
+
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <input autofocus type="text" placeholder="Enter todo item" class="form-control" [(ngModel)]="editItem.name" />
+            </div>
+      
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+              <button class="btn btn-primary" (click)="updateItem()">update</button>
+            </div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>

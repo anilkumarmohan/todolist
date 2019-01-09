@@ -1,0 +1,47 @@
+<div class="main-content">
+  <div class="header">
+    <p class="h1 color-green">Todo List</p>
+  </div>
+  <div class="content">
+
+    <div class="search-box">
+
+      <div class="row">
+
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+          <input type="text" placeholder="Enter todo item" class="form-control" [(ngModel)]="todoText" value={{todoText}} />
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+          <input type="button" value="Add" class="btn btn-primary" (click)="addTodo(todoText)">
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="mt-5">
+
+      <table class="table table-hovered table-bordered">
+
+        <thead>
+          <th>Name</th>
+          <th>Action</th>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let todo of todoLists">
+            <td class="mr-5 list-text">{{todo.name}}</td>
+            <td> <a class="lnk_btn ml-2" (click)="editTodo(todo)">edit</a>
+              <a class="lnk_btn ml-2" (click)="removeTodo(todo.id)">delete</a></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+
+    </div>
+  </div>
+</div>

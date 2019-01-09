@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+// _variables.scss
+
+
+@import './variables';
+
+@mixin roundCorners($size) {
+    border-radius: $size;
+    box-shadow: 1px 1px 1px 1px #ccc
+}
+
+.header {
+    p {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        border-bottom: 1px solid #f7f7f7;
+        padding: 8px;
+        &:hover {
+            color: red
+        }
+    }
+}
+
+input[type="text"] {
+    margin: 0 5px
+}
+
+.main-content{
+    width:70%;
+    height:70%;
+    margin: 100px auto;
+    padding: 2rem;
+    @include roundCorners(5px)
+}
+
+.color-green{
+    color:$light-green;
+}
+
+.lnk_btn{
+    cursor:pointer;
+    text-decoration: underline;
+    color:$light-blue;
+}
+
+.list-text{
+    color: $dark-green;
+    font-size:1.5rem;
+}
