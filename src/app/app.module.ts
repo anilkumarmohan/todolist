@@ -9,7 +9,6 @@ import { FormsModule } from '@angular/forms';
 import { EditComponent } from './components/todo/edit/edit.component';
 const appRoutes: Routes = [
   { path: 'todolist/edit', component: EditComponent },
-  // { path: 'hero/:id',      component: HeroDetailComponent },
   {
     path: 'todolist',
     component: ListComponent
@@ -32,7 +31,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: true }
     )
   ],
   providers: [],
