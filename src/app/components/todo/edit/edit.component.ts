@@ -13,13 +13,13 @@ export class EditComponent implements OnInit {
   editItem : EditItem;
 
   constructor(private router: Router) {
-
+    // fetching todo list from localStorage
     this.editItem  = <EditItem>JSON.parse(localStorage.getItem("edittodo"));
   } 
 
   ngOnInit() {
   }
-
+  // method to update todo, store to localStorage and navigate back to todolist page
   updateItem = () => {
 
     let todoList = <EditItem[]> JSON.parse(localStorage.getItem("todos"));
