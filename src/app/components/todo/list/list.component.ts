@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
   todoLists: TodoList[];
 
   constructor(private router: Router) {
-  
+    // Fetching existing todo list if any and setting next index to be inserted
     let todos = this.getTodos();
     if (todos.length == 0) {
   
@@ -32,13 +32,13 @@ export class ListComponent implements OnInit {
   ngOnInit() {
 
   }
-
+  // method to fetch todolist form localStoarge 
   getTodos = (): TodoList[] => {
   
     let todoList = JSON.parse(localStorage.getItem('todos'));
     return todoList == null ? [] : todoList;
   }
-
+  // method to add new todo list to localStorage
   addTodo = (text: string): void => {
 
     let todo = new TodoList(this.nextId, text);
@@ -51,7 +51,7 @@ export class ListComponent implements OnInit {
     this.nextId++;
 
   }
-
+  // method for removing exsting todo from localStorage
   removeTodo = (id: number): void => {
   
     let todos = this.getTodos();
@@ -60,11 +60,11 @@ export class ListComponent implements OnInit {
     this.todoLists = todos;
 
   }
-
+  // common method only for setting item to localStorage
   setLocalStorageTodos = (todos: TodoList[]): void => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }
-
+  // this method will execute while clicking on edit button
   editTodo = (todo: TodoList[]) => {
     localStorage.setItem('edittodo', JSON.stringify(todo));
     this.router.navigate(['todolist','edit']);
