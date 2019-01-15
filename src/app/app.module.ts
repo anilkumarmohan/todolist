@@ -7,8 +7,11 @@ import { ListComponent } from './components/todo/list/list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './components/todo/edit/edit.component';
+import { AddComponent } from './components/todo/add/add.component';
 const appRoutes: Routes = [
   { path: 'todolist/edit', component: EditComponent },
+  { path: 'todolist/add', component: AddComponent },
+
   {
     path: 'todolist',
     component: ListComponent
@@ -23,7 +26,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,

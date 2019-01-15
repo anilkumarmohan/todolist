@@ -8,12 +8,12 @@
 
       <div class="row">
 
-        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+        <!-- <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
           <input type="text" placeholder="Enter todo item" class="form-control" [(ngModel)]="todoText" value={{todoText}} />
-        </div>
+        </div> -->
 
         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-          <input type="button" value="Add" class="btn btn-primary" (click)="addTodo(todoText)">
+          <input type="button" value="Add New" class="btn btn-primary" (click)="addTodo(todoText)">
         </div>
 
       </div>
@@ -24,7 +24,7 @@
 
       <table class="table table-hovered table-bordered">
 
-        <thead>
+        <thead *ngIf="todoLists.length > 0">
           <th>Name</th>
           <th>Action</th>
         </thead>
@@ -35,7 +35,9 @@
             <td> <a class="lnk_btn ml-2" (click)="editTodo(todo)">edit</a>
               <a class="lnk_btn ml-2" (click)="removeTodo(todo.id)">delete</a></td>
           </tr>
-
+          <tr *ngIf="todoLists.length == 0">
+            No items found
+          </tr>
         </tbody>
 
       </table>

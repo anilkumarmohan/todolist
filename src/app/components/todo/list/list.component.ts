@@ -41,14 +41,17 @@ export class ListComponent implements OnInit {
   // method to add new todo list to localStorage
   addTodo = (text: string): void => {
 
-    let todo = new TodoList(this.nextId, text);
-    let todos = this.getTodos();
-    todos.push(todo);
+    // let todo = new TodoList(this.nextId, text);
+    // let todos = this.getTodos();
+    // todos.push(todo);
     
-    this.setLocalStorageTodos(todos);
-    this.todoLists = todos;
-    this.todoText = null;
-    this.nextId++;
+    // this.setLocalStorageTodos(todos);
+    // this.todoLists = todos;
+    // this.todoText = null;
+    // this.nextId++;
+
+    this.router.navigate(['todolist','add']);
+
 
   }
   // method for removing exsting todo from localStorage

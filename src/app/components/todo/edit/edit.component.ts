@@ -29,4 +29,8 @@ export class EditComponent implements OnInit {
     this.router.navigate(["todolist"]);
 
   }
+  cancelItem = () =>{
+    this.router.navigate(["todolist"]);
+
+  }
 }
