@@ -27,9 +27,10 @@ A project to add daily todo activities.Used local storage for storing data
    ```sh
    $ ng build
    ```
-   Set configurations in 'environment.ts' file for building app in dev environment.
+   Set configurations in `environment.ts` file for building app in dev environment.
 7. For building app for production environment, run command 
     ```sh
     $ ng build --prod
     ```
-    Set configurations in 'environment.prod.ts' for production builds.
+    Set configurations in `environment.prod.ts` for production builds.It will create a new folder named `dist` in application root 
+    directory which contains bundled files.
