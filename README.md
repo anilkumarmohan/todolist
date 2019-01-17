@@ -5,7 +5,7 @@ A project to add daily todo activities.Used local storage for storing data
 
 ## Technologies used
 1. Angular (Version 7.0.1) and angular-cli
-2. Node,js (Version 10.15.0)
+2. Node.js (Version 10.15.0)
 3. Bootstrap and SASS
 
 ## Running App
