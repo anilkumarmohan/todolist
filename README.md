@@ -12,7 +12,7 @@ A project to add daily todo activities.Used local storage for storing data
 
 1. Install node package manager.
 2. Create new folder locally and clone git repo into it.
-3. Go to application root directory and open command promt
+3. Go to application root directory and open command prompt
 4. Run command.
     ```sh
     $ npm install
