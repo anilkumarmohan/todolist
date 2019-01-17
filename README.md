@@ -21,7 +21,7 @@ A project to add daily todo activities.Used local storage for storing data
     ```sh
     $ ng serve
     ```
-   It will run the apllication in localhost server port 4200.
+   It will run the application in localhost server port 4200.
    
 6. For building application in dev environment, run command 
    ```sh
